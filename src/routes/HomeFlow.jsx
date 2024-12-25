@@ -6,7 +6,7 @@ const HomeFlow = () => {
   const HomeFlowStack = createNativeStackNavigator();
 
   return (
-    <HomeFlowStack.Navigator>
+    <HomeFlowStack.Navigator screenOptions={{headerShown: false}}>
       <HomeFlowStack.Screen
         name="FeedPostsScreen"
         component={FeedPostsScreen}

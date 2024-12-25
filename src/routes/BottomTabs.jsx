@@ -8,7 +8,7 @@ import ReelsScreen from '../screens/ReelsFlow/ReelsScreen';
 const BottomTabs = () => {
   const BottomTabsNavigator = createBottomTabNavigator();
   return (
-    <BottomTabsNavigator.Navigator>
+    <BottomTabsNavigator.Navigator screenOptions={{headerShown: false}}>
       <BottomTabsNavigator.Screen
         name={routes.HOME_FLOW}
         component={HomeFlow}
@@ -30,5 +30,3 @@ const BottomTabs = () => {
 };
 
 export default BottomTabs;
-
-const styles = StyleSheet.create({});
