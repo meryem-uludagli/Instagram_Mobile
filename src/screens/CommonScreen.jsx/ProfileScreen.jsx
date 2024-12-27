@@ -5,6 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Avatar from '../../components/Avatar/Avatar';
 import ProfileData from '../../components/ProfileFlow/ProfileData';
 import {colors} from '../../constants/colors';
+import CustomButton from '../../components/CustomButtons/CustomButton';
 
 const source =
   'https://i.pinimg.com/736x/54/ec/1e/54ec1e498642894b6c15752658bae14c.jpg';
@@ -66,11 +67,25 @@ const ProfileScreen = () => {
             </View>
 
             <View style={styles.followersRight}>
-              <Text style={styles.followed}> Followed by </Text>
+              <Text style={styles.followed}>Followed by </Text>
               <Text style={styles.boldfollowed}> usurname </Text>
               <Text style={styles.boldfollowed}> usurname </Text>
               <Text style={styles.followed}> and </Text>
               <Text style={styles.boldfollowed}> 100 others </Text>
+            </View>
+          </View>
+
+          <View tyle={styles.buttons}>
+            <CustomButton title={'Follow'} theme={'primary'} />
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                gap: 6,
+              }}>
+              <CustomButton title={'Message'} theme={'outline'} />
+              <CustomButton title={'Subscribe'} theme={'outline'} />
+              <CustomButton title={'Contact'} theme={'outline'} />
             </View>
           </View>
         </View>
@@ -151,5 +166,8 @@ const styles = StyleSheet.create({
   },
   followersRight: {
     flexDirection: 'row',
+  },
+  buttons: {
+    gap: 9,
   },
 });
